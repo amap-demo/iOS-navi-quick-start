@@ -235,7 +235,7 @@
         
         MAPointAnnotation *annotation = [[MAPointAnnotation alloc] init];
         [annotation setCoordinate:CLLocationCoordinate2DMake(obj.location.latitude, obj.location.longitude)];
-        [annotation setTitle:obj.name];
+        [annotation setTitle:[NSString stringWithFormat:@"%@ - %ld米", obj.name, (long)obj.distance]];
         [annotation setSubtitle:obj.address];
         
         [_poiAnnotations addObject:annotation];
