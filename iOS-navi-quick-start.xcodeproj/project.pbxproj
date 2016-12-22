@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BC6FC32244DDF45652ECF24 /* libPods-iOS-navi-quick-start.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B80C18C5F046A1E8D6DF4F5 /* libPods-iOS-navi-quick-start.a */; };
+		3AA6B5BD1E0B784D007A15F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5BC1E0B784D007A15F3 /* main.m */; };
+		3AA6B5C01E0B784D007A15F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5BF1E0B784D007A15F3 /* AppDelegate.m */; };
+		3AA6B5C81E0B784D007A15F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5C71E0B784D007A15F3 /* Assets.xcassets */; };
+		3AA6B5CB1E0B784D007A15F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5C91E0B784D007A15F3 /* LaunchScreen.storyboard */; };
+		3AA6B5E01E0B7AB6007A15F3 /* DriveNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5D71E0B7AB6007A15F3 /* DriveNaviViewController.m */; };
+		3AA6B5E11E0B7AB6007A15F3 /* SpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5DA1E0B7AB6007A15F3 /* SpeechSynthesizer.m */; };
+		3AA6B5E21E0B7AB6007A15F3 /* QuickStartAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5DD1E0B7AB6007A15F3 /* QuickStartAnnotationView.m */; };
+		3AA6B5E31E0B7AB6007A15F3 /* QuickStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5DF1E0B7AB6007A15F3 /* QuickStartViewController.m */; };
+		3AA6B5E71E0B7AFC007A15F3 /* MoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5E61E0B7AFC007A15F3 /* MoreMenuView.m */; };
+		3AA6B5EC1E0B7C11007A15F3 /* navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5E91E0B7C11007A15F3 /* navi@2x.png */; };
+		3AA6B5ED1E0B7C11007A15F3 /* naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5EA1E0B7C11007A15F3 /* naviBackgroundHighlighted.png */; };
+		3AA6B5EE1E0B7C11007A15F3 /* naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5EB1E0B7C11007A15F3 /* naviBackgroundNormal.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B80C18C5F046A1E8D6DF4F5 /* libPods-iOS-navi-quick-start.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-navi-quick-start.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA6B5B81E0B784D007A15F3 /* iOS-navi-quick-start.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-navi-quick-start.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA6B5BC1E0B784D007A15F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AA6B5BE1E0B784D007A15F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3AA6B5BF1E0B784D007A15F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3AA6B5C71E0B784D007A15F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AA6B5CA1E0B784D007A15F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AA6B5CC1E0B784D007A15F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA6B5D31E0B79FE007A15F3 /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		3AA6B5D61E0B7AB6007A15F3 /* DriveNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveNaviViewController.h; sourceTree = "<group>"; };
+		3AA6B5D71E0B7AB6007A15F3 /* DriveNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveNaviViewController.m; sourceTree = "<group>"; };
+		3AA6B5D91E0B7AB6007A15F3 /* SpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechSynthesizer.h; sourceTree = "<group>"; };
+		3AA6B5DA1E0B7AB6007A15F3 /* SpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechSynthesizer.m; sourceTree = "<group>"; };
+		3AA6B5DC1E0B7AB6007A15F3 /* QuickStartAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickStartAnnotationView.h; sourceTree = "<group>"; };
+		3AA6B5DD1E0B7AB6007A15F3 /* QuickStartAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickStartAnnotationView.m; sourceTree = "<group>"; };
+		3AA6B5DE1E0B7AB6007A15F3 /* QuickStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickStartViewController.h; sourceTree = "<group>"; };
+		3AA6B5DF1E0B7AB6007A15F3 /* QuickStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickStartViewController.m; sourceTree = "<group>"; };
+		3AA6B5E51E0B7AFC007A15F3 /* MoreMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreMenuView.h; sourceTree = "<group>"; };
+		3AA6B5E61E0B7AFC007A15F3 /* MoreMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreMenuView.m; sourceTree = "<group>"; };
+		3AA6B5E91E0B7C11007A15F3 /* navi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi@2x.png"; sourceTree = "<group>"; };
+		3AA6B5EA1E0B7C11007A15F3 /* naviBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundHighlighted.png; sourceTree = "<group>"; };
+		3AA6B5EB1E0B7C11007A15F3 /* naviBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundNormal.png; sourceTree = "<group>"; };
+		6ECD8A2A5127DCE2F931DAB5 /* Pods-iOS-navi-quick-start.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-navi-quick-start.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start.release.xcconfig"; sourceTree = "<group>"; };
+		74D59919CB5BECC0E48AAEC0 /* Pods-iOS-navi-quick-start.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-navi-quick-start.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AA6B5B51E0B784D007A15F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC6FC32244DDF45652ECF24 /* libPods-iOS-navi-quick-start.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AA6B5AF1E0B784D007A15F3 = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5BA1E0B784D007A15F3 /* iOS-navi-quick-start */,
+				3AA6B5B91E0B784D007A15F3 /* Products */,
+				8E8512BDC8E432811B3FE7BA /* Pods */,
+				F461A9A0B1CE10981F270499 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3AA6B5B91E0B784D007A15F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5B81E0B784D007A15F3 /* iOS-navi-quick-start.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AA6B5BA1E0B784D007A15F3 /* iOS-navi-quick-start */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5BE1E0B784D007A15F3 /* AppDelegate.h */,
+				3AA6B5BF1E0B784D007A15F3 /* AppDelegate.m */,
+				3AA6B5DB1E0B7AB6007A15F3 /* QuickStart */,
+				3AA6B5D41E0B7AB6007A15F3 /* Common */,
+				3AA6B5E81E0B7C11007A15F3 /* Images */,
+				3AA6B5D21E0B79FE007A15F3 /* Configuration */,
+				3AA6B5C71E0B784D007A15F3 /* Assets.xcassets */,
+				3AA6B5C91E0B784D007A15F3 /* LaunchScreen.storyboard */,
+				3AA6B5CC1E0B784D007A15F3 /* Info.plist */,
+				3AA6B5BB1E0B784D007A15F3 /* Supporting Files */,
+			);
+			path = "iOS-navi-quick-start";
+			sourceTree = "<group>";
+		};
+		3AA6B5BB1E0B784D007A15F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5BC1E0B784D007A15F3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AA6B5D21E0B79FE007A15F3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5D31E0B79FE007A15F3 /* APIKey.h */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3AA6B5D41E0B7AB6007A15F3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5E41E0B7AFC007A15F3 /* MoreMenuView */,
+				3AA6B5D51E0B7AB6007A15F3 /* DriveNaviViewController */,
+				3AA6B5D81E0B7AB6007A15F3 /* SpeechSynthesizer */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3AA6B5D51E0B7AB6007A15F3 /* DriveNaviViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5D61E0B7AB6007A15F3 /* DriveNaviViewController.h */,
+				3AA6B5D71E0B7AB6007A15F3 /* DriveNaviViewController.m */,
+			);
+			path = DriveNaviViewController;
+			sourceTree = "<group>";
+		};
+		3AA6B5D81E0B7AB6007A15F3 /* SpeechSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5D91E0B7AB6007A15F3 /* SpeechSynthesizer.h */,
+				3AA6B5DA1E0B7AB6007A15F3 /* SpeechSynthesizer.m */,
+			);
+			path = SpeechSynthesizer;
+			sourceTree = "<group>";
+		};
+		3AA6B5DB1E0B7AB6007A15F3 /* QuickStart */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5DE1E0B7AB6007A15F3 /* QuickStartViewController.h */,
+				3AA6B5DF1E0B7AB6007A15F3 /* QuickStartViewController.m */,
+				3AA6B5DC1E0B7AB6007A15F3 /* QuickStartAnnotationView.h */,
+				3AA6B5DD1E0B7AB6007A15F3 /* QuickStartAnnotationView.m */,
+			);
+			path = QuickStart;
+			sourceTree = "<group>";
+		};
+		3AA6B5E41E0B7AFC007A15F3 /* MoreMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5E51E0B7AFC007A15F3 /* MoreMenuView.h */,
+				3AA6B5E61E0B7AFC007A15F3 /* MoreMenuView.m */,
+			);
+			path = MoreMenuView;
+			sourceTree = "<group>";
+		};
+		3AA6B5E81E0B7C11007A15F3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5E91E0B7C11007A15F3 /* navi@2x.png */,
+				3AA6B5EA1E0B7C11007A15F3 /* naviBackgroundHighlighted.png */,
+				3AA6B5EB1E0B7C11007A15F3 /* naviBackgroundNormal.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8E8512BDC8E432811B3FE7BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74D59919CB5BECC0E48AAEC0 /* Pods-iOS-navi-quick-start.debug.xcconfig */,
+				6ECD8A2A5127DCE2F931DAB5 /* Pods-iOS-navi-quick-start.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F461A9A0B1CE10981F270499 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B80C18C5F046A1E8D6DF4F5 /* libPods-iOS-navi-quick-start.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AA6B5B71E0B784D007A15F3 /* iOS-navi-quick-start */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA6B5CF1E0B784D007A15F3 /* Build configuration list for PBXNativeTarget "iOS-navi-quick-start" */;
+			buildPhases = (
+				427E8833B145E038173498DF /* [CP] Check Pods Manifest.lock */,
+				3AA6B5B41E0B784D007A15F3 /* Sources */,
+				3AA6B5B51E0B784D007A15F3 /* Frameworks */,
+				3AA6B5B61E0B784D007A15F3 /* Resources */,
+				BAE9E2EE9C77070A31D54D57 /* [CP] Embed Pods Frameworks */,
+				A09002D1607E0D601A3EDA8C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-navi-quick-start";
+			productName = "iOS-navi-quick-start";
+			productReference = 3AA6B5B81E0B784D007A15F3 /* iOS-navi-quick-start.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AA6B5B01E0B784D007A15F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = AutoNavi;
+				TargetAttributes = {
+					3AA6B5B71E0B784D007A15F3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YMJ372W38W;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3AA6B5B31E0B784D007A15F3 /* Build configuration list for PBXProject "iOS-navi-quick-start" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AA6B5AF1E0B784D007A15F3;
+			productRefGroup = 3AA6B5B91E0B784D007A15F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AA6B5B71E0B784D007A15F3 /* iOS-navi-quick-start */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AA6B5B61E0B784D007A15F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA6B5CB1E0B784D007A15F3 /* LaunchScreen.storyboard in Resources */,
+				3AA6B5EC1E0B7C11007A15F3 /* navi@2x.png in Resources */,
+				3AA6B5EE1E0B7C11007A15F3 /* naviBackgroundNormal.png in Resources */,
+				3AA6B5C81E0B784D007A15F3 /* Assets.xcassets in Resources */,
+				3AA6B5ED1E0B7C11007A15F3 /* naviBackgroundHighlighted.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		427E8833B145E038173498DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A09002D1607E0D601A3EDA8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE9E2EE9C77070A31D54D57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AA6B5B41E0B784D007A15F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA6B5E21E0B7AB6007A15F3 /* QuickStartAnnotationView.m in Sources */,
+				3AA6B5E11E0B7AB6007A15F3 /* SpeechSynthesizer.m in Sources */,
+				3AA6B5E31E0B7AB6007A15F3 /* QuickStartViewController.m in Sources */,
+				3AA6B5E71E0B7AFC007A15F3 /* MoreMenuView.m in Sources */,
+				3AA6B5C01E0B784D007A15F3 /* AppDelegate.m in Sources */,
+				3AA6B5BD1E0B784D007A15F3 /* main.m in Sources */,
+				3AA6B5E01E0B7AB6007A15F3 /* DriveNaviViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AA6B5C91E0B784D007A15F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA6B5CA1E0B784D007A15F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AA6B5CD1E0B784D007A15F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3AA6B5CE1E0B784D007A15F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AA6B5D01E0B784D007A15F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D59919CB5BECC0E48AAEC0 /* Pods-iOS-navi-quick-start.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = "iOS-navi-quick-start/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-start";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "249676f7-6dfc-4adf-ab62-14190fd9ac21";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+			};
+			name = Debug;
+		};
+		3AA6B5D11E0B784D007A15F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECD8A2A5127DCE2F931DAB5 /* Pods-iOS-navi-quick-start.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = "iOS-navi-quick-start/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-start";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a892512d-fe94-4702-b716-0b66880b936d";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatformInhouse;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AA6B5B31E0B784D007A15F3 /* Build configuration list for PBXProject "iOS-navi-quick-start" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6B5CD1E0B784D007A15F3 /* Debug */,
+				3AA6B5CE1E0B784D007A15F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA6B5CF1E0B784D007A15F3 /* Build configuration list for PBXNativeTarget "iOS-navi-quick-start" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6B5D01E0B784D007A15F3 /* Debug */,
+				3AA6B5D11E0B784D007A15F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AA6B5B01E0B784D007A15F3 /* Project object */;
+}
