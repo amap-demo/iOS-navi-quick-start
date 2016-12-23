@@ -15,6 +15,7 @@
 
 ## 核心难点 ##
 
+`Objective-C`
 ```
 /* 根据当前位置进行POI周边餐饮搜索. */
 - (void)startPOIAroundSearch
@@ -52,5 +53,42 @@
                                                 endPoints:@[_endPoint]
                                                 wayPoints:nil
                                           drivingStrategy:AMapNaviDrivingStrategySingleDefault];
+}
+```
+
+`Swift`
+```
+/* 根据当前位置进行POI周边餐饮搜索. */
+func startPOIAroundSearch() {
+    
+    guard let userLocation = userLocation else {
+        NSLog("未获取到当前位置")
+        return
+    }
+    
+    let request = AMapPOIAroundSearchRequest()
+    
+    request.location = AMapGeoPoint.location(withLatitude: CGFloat(userLocation.location.coordinate.latitude),
+                                             longitude: CGFloat(userLocation.location.coordinate.longitude))
+    request.keywords = "餐饮"
+    request.sortrule = 1
+    request.requireExtension = false
+    
+    search.aMapPOIAroundSearch(request)
+}
+
+/* 根据当前位置和目的地POI的位置进行路径规划. */
+func routePlanAction() {
+    guard let endPoint = endPoint else {
+        return
+    }
+    
+    guard let userLocation = userLocation else {
+        NSLog("未获取到当前位置")
+        return
+    }
+    
+    let startP = AMapNaviPoint.location(withLatitude: CGFloat(userLocation.coordinate.latitude), longitude: CGFloat(userLocation.coordinate.longitude))!
+    driveManager.calculateDriveRoute(withStart: [startP], end: [endPoint], wayPoints: nil, drivingStrategy: .singleDefault)
 }
 ```

@@ -20,10 +20,24 @@
 		3AA6B5EC1E0B7C11007A15F3 /* navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5E91E0B7C11007A15F3 /* navi@2x.png */; };
 		3AA6B5ED1E0B7C11007A15F3 /* naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5EA1E0B7C11007A15F3 /* naviBackgroundHighlighted.png */; };
 		3AA6B5EE1E0B7C11007A15F3 /* naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5EB1E0B7C11007A15F3 /* naviBackgroundNormal.png */; };
+		3AA6B5F61E0D01ED007A15F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5F51E0D01ED007A15F3 /* AppDelegate.swift */; };
+		3AA6B5FD1E0D01ED007A15F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5FC1E0D01ED007A15F3 /* Assets.xcassets */; };
+		3AA6B6001E0D01ED007A15F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5FE1E0D01ED007A15F3 /* LaunchScreen.storyboard */; };
+		3AA6B6091E0D022E007A15F3 /* QuickStartAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B6071E0D022E007A15F3 /* QuickStartAnnotationView.swift */; };
+		3AA6B60A1E0D022E007A15F3 /* QuickStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B6081E0D022E007A15F3 /* QuickStartViewController.swift */; };
+		3AA6B60B1E0D0372007A15F3 /* MoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B5E61E0B7AFC007A15F3 /* MoreMenuView.m */; };
+		3AA6B6111E0D037B007A15F3 /* DriveNaviViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B60E1E0D037B007A15F3 /* DriveNaviViewViewController.swift */; };
+		3AA6B6121E0D037B007A15F3 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B6101E0D037B007A15F3 /* SpeechSynthesizer.swift */; };
+		3AA6B6131E0D044E007A15F3 /* navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5E91E0B7C11007A15F3 /* navi@2x.png */; };
+		3AA6B6141E0D0451007A15F3 /* naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5EA1E0B7C11007A15F3 /* naviBackgroundHighlighted.png */; };
+		3AA6B6151E0D0454007A15F3 /* naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B5EB1E0B7C11007A15F3 /* naviBackgroundNormal.png */; };
+		E93A4E86A614237F9971CD34 /* libPods-iOS-navi-quick-start-swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8E461658FDBFD1BEB7190F /* libPods-iOS-navi-quick-start-swift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B8E461658FDBFD1BEB7190F /* libPods-iOS-navi-quick-start-swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-navi-quick-start-swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B80C18C5F046A1E8D6DF4F5 /* libPods-iOS-navi-quick-start.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-navi-quick-start.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A044C1D02E26C404F67A2C /* Pods-iOS-navi-quick-start-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-navi-quick-start-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		3AA6B5B81E0B784D007A15F3 /* iOS-navi-quick-start.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-navi-quick-start.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA6B5BC1E0B784D007A15F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3AA6B5BE1E0B784D007A15F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,8 +59,19 @@
 		3AA6B5E91E0B7C11007A15F3 /* navi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi@2x.png"; sourceTree = "<group>"; };
 		3AA6B5EA1E0B7C11007A15F3 /* naviBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundHighlighted.png; sourceTree = "<group>"; };
 		3AA6B5EB1E0B7C11007A15F3 /* naviBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundNormal.png; sourceTree = "<group>"; };
+		3AA6B5F31E0D01ED007A15F3 /* iOS-navi-quick-start-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-navi-quick-start-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA6B5F51E0D01ED007A15F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AA6B5FC1E0D01ED007A15F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AA6B5FF1E0D01ED007A15F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AA6B6011E0D01ED007A15F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA6B6051E0D0217007A15F3 /* Swift-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Header.h"; sourceTree = "<group>"; };
+		3AA6B6071E0D022E007A15F3 /* QuickStartAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartAnnotationView.swift; sourceTree = "<group>"; };
+		3AA6B6081E0D022E007A15F3 /* QuickStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartViewController.swift; sourceTree = "<group>"; };
+		3AA6B60E1E0D037B007A15F3 /* DriveNaviViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveNaviViewViewController.swift; sourceTree = "<group>"; };
+		3AA6B6101E0D037B007A15F3 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		6ECD8A2A5127DCE2F931DAB5 /* Pods-iOS-navi-quick-start.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-navi-quick-start.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start.release.xcconfig"; sourceTree = "<group>"; };
 		74D59919CB5BECC0E48AAEC0 /* Pods-iOS-navi-quick-start.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-navi-quick-start.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start.debug.xcconfig"; sourceTree = "<group>"; };
+		F5D00E627E0FBA380C383E90 /* Pods-iOS-navi-quick-start-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-navi-quick-start-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +83,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AA6B5F01E0D01ED007A15F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93A4E86A614237F9971CD34 /* libPods-iOS-navi-quick-start-swift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA6B5BA1E0B784D007A15F3 /* iOS-navi-quick-start */,
+				3AA6B5F41E0D01ED007A15F3 /* iOS-navi-quick-start-swift */,
 				3AA6B5B91E0B784D007A15F3 /* Products */,
 				8E8512BDC8E432811B3FE7BA /* Pods */,
 				F461A9A0B1CE10981F270499 /* Frameworks */,
@@ -75,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA6B5B81E0B784D007A15F3 /* iOS-navi-quick-start.app */,
+				3AA6B5F31E0D01ED007A15F3 /* iOS-navi-quick-start-swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,11 +205,61 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		3AA6B5F41E0D01ED007A15F3 /* iOS-navi-quick-start-swift */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B5F51E0D01ED007A15F3 /* AppDelegate.swift */,
+				3AA6B6061E0D022E007A15F3 /* QuickStart */,
+				3AA6B60C1E0D037B007A15F3 /* Common */,
+				3AA6B6051E0D0217007A15F3 /* Swift-Bridge-Header.h */,
+				3AA6B5FC1E0D01ED007A15F3 /* Assets.xcassets */,
+				3AA6B5FE1E0D01ED007A15F3 /* LaunchScreen.storyboard */,
+				3AA6B6011E0D01ED007A15F3 /* Info.plist */,
+			);
+			path = "iOS-navi-quick-start-swift";
+			sourceTree = "<group>";
+		};
+		3AA6B6061E0D022E007A15F3 /* QuickStart */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B6081E0D022E007A15F3 /* QuickStartViewController.swift */,
+				3AA6B6071E0D022E007A15F3 /* QuickStartAnnotationView.swift */,
+			);
+			path = QuickStart;
+			sourceTree = "<group>";
+		};
+		3AA6B60C1E0D037B007A15F3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B60D1E0D037B007A15F3 /* DriveNaviViewController */,
+				3AA6B60F1E0D037B007A15F3 /* SpeechSynthesizer */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3AA6B60D1E0D037B007A15F3 /* DriveNaviViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B60E1E0D037B007A15F3 /* DriveNaviViewViewController.swift */,
+			);
+			path = DriveNaviViewController;
+			sourceTree = "<group>";
+		};
+		3AA6B60F1E0D037B007A15F3 /* SpeechSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				3AA6B6101E0D037B007A15F3 /* SpeechSynthesizer.swift */,
+			);
+			path = SpeechSynthesizer;
+			sourceTree = "<group>";
+		};
 		8E8512BDC8E432811B3FE7BA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				74D59919CB5BECC0E48AAEC0 /* Pods-iOS-navi-quick-start.debug.xcconfig */,
 				6ECD8A2A5127DCE2F931DAB5 /* Pods-iOS-navi-quick-start.release.xcconfig */,
+				36A044C1D02E26C404F67A2C /* Pods-iOS-navi-quick-start-swift.debug.xcconfig */,
+				F5D00E627E0FBA380C383E90 /* Pods-iOS-navi-quick-start-swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -183,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				1B80C18C5F046A1E8D6DF4F5 /* libPods-iOS-navi-quick-start.a */,
+				0B8E461658FDBFD1BEB7190F /* libPods-iOS-navi-quick-start-swift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,16 +296,47 @@
 			productReference = 3AA6B5B81E0B784D007A15F3 /* iOS-navi-quick-start.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3AA6B5F21E0D01ED007A15F3 /* iOS-navi-quick-start-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA6B6041E0D01ED007A15F3 /* Build configuration list for PBXNativeTarget "iOS-navi-quick-start-swift" */;
+			buildPhases = (
+				A5F8C4799302669E90439E69 /* [CP] Check Pods Manifest.lock */,
+				3AA6B5EF1E0D01ED007A15F3 /* Sources */,
+				3AA6B5F01E0D01ED007A15F3 /* Frameworks */,
+				3AA6B5F11E0D01ED007A15F3 /* Resources */,
+				1575162CA93BE06A4FCEE616 /* [CP] Embed Pods Frameworks */,
+				4FA071888CBAB196F54F9C1E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-navi-quick-start-swift";
+			productName = "iOS-navi-quick-start-swift";
+			productReference = 3AA6B5F31E0D01ED007A15F3 /* iOS-navi-quick-start-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3AA6B5B01E0B784D007A15F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = AutoNavi;
 				TargetAttributes = {
 					3AA6B5B71E0B784D007A15F3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YMJ372W38W;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					3AA6B5F21E0D01ED007A15F3 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = YMJ372W38W;
 						ProvisioningStyle = Manual;
@@ -245,6 +362,7 @@
 			projectRoot = "";
 			targets = (
 				3AA6B5B71E0B784D007A15F3 /* iOS-navi-quick-start */,
+				3AA6B5F21E0D01ED007A15F3 /* iOS-navi-quick-start-swift */,
 			);
 		};
 /* End PBXProject section */
@@ -262,9 +380,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AA6B5F11E0D01ED007A15F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA6B6001E0D01ED007A15F3 /* LaunchScreen.storyboard in Resources */,
+				3AA6B6131E0D044E007A15F3 /* navi@2x.png in Resources */,
+				3AA6B6151E0D0454007A15F3 /* naviBackgroundNormal.png in Resources */,
+				3AA6B5FD1E0D01ED007A15F3 /* Assets.xcassets in Resources */,
+				3AA6B6141E0D0451007A15F3 /* naviBackgroundHighlighted.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1575162CA93BE06A4FCEE616 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		427E8833B145E038173498DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +425,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		4FA071888CBAB196F54F9C1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A09002D1607E0D601A3EDA8C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +453,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F8C4799302669E90439E69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BAE9E2EE9C77070A31D54D57 /* [CP] Embed Pods Frameworks */ = {
@@ -327,6 +502,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AA6B5EF1E0D01ED007A15F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA6B60B1E0D0372007A15F3 /* MoreMenuView.m in Sources */,
+				3AA6B6111E0D037B007A15F3 /* DriveNaviViewViewController.swift in Sources */,
+				3AA6B6121E0D037B007A15F3 /* SpeechSynthesizer.swift in Sources */,
+				3AA6B6091E0D022E007A15F3 /* QuickStartAnnotationView.swift in Sources */,
+				3AA6B5F61E0D01ED007A15F3 /* AppDelegate.swift in Sources */,
+				3AA6B60A1E0D022E007A15F3 /* QuickStartViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -334,6 +522,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				3AA6B5CA1E0B784D007A15F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3AA6B5FE1E0D01ED007A15F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA6B5FF1E0D01ED007A15F3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -462,6 +658,46 @@
 			};
 			name = Release;
 		};
+		3AA6B6021E0D01ED007A15F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A044C1D02E26C404F67A2C /* Pods-iOS-navi-quick-start-swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = "iOS-navi-quick-start-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-start";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "249676f7-6dfc-4adf-ab62-14190fd9ac21";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-navi-quick-start-swift/Swift-Bridge-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3AA6B6031E0D01ED007A15F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5D00E627E0FBA380C383E90 /* Pods-iOS-navi-quick-start-swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = "iOS-navi-quick-start-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-start";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a892512d-fe94-4702-b716-0b66880b936d";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatformInhouse;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-navi-quick-start-swift/Swift-Bridge-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +715,15 @@
 			buildConfigurations = (
 				3AA6B5D01E0B784D007A15F3 /* Debug */,
 				3AA6B5D11E0B784D007A15F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA6B6041E0D01ED007A15F3 /* Build configuration list for PBXNativeTarget "iOS-navi-quick-start-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6B6021E0D01ED007A15F3 /* Debug */,
+				3AA6B6031E0D01ED007A15F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
