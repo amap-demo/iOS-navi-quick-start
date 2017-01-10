@@ -12,11 +12,11 @@
 #import "DriveNaviViewController.h"
 #import "QuickStartAnnotationView.h"
 
-@interface QuickStartViewController ()<MAMapViewDelegate, AMapSearchDelegate, AMapNaviDriveManagerDelegate, DriveNaviViewControllerDelegate>
+@interface QuickStartViewController ()<MAMapViewDelegate, AMapSearchDelegate, AMapNaviDriveManagerDelegate, AMapLocationManagerDelegate, DriveNaviViewControllerDelegate>
 {
     AMapNaviPoint *_endPoint;
     
-    MAUserLocation *_userLocation;
+    CLLocation *_curLocation;
     
     NSMutableArray *_poiAnnotations;
 }
@@ -42,6 +42,10 @@
     [self initDriveManager];
     
     [self initSearch];
+    
+    [self initLocationManater];
+    
+    [self updateCurrentLocation];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,13 +54,6 @@
     
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.toolbarHidden = YES;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [self.mapView setShowsUserLocation:YES];
 }
 
 #pragma mark - Initalization
@@ -98,11 +95,22 @@
     }
 }
 
+- (void)initLocationManater
+{
+    if (self.locationManager == nil)
+    {
+        self.locationManager = [[AMapLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        
+        [self.locationManager setLocationTimeout:3];
+    }
+}
+
 #pragma mark - Search
 
 - (void)startPOIAroundSearch
 {
-    if (_userLocation == nil)
+    if (_curLocation == nil)
     {
         NSLog(@"未获取到当前位置");
         return;
@@ -110,8 +118,8 @@
     
     AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
     
-    request.location = [AMapGeoPoint locationWithLatitude:_userLocation.location.coordinate.latitude
-                                                longitude:_userLocation.location.coordinate.longitude];
+    request.location = [AMapGeoPoint locationWithLatitude:_curLocation.coordinate.latitude
+                                                longitude:_curLocation.coordinate.longitude];
     request.keywords            = @"餐饮";
     request.sortrule            = 1;
     request.requireExtension    = NO;
@@ -119,18 +127,42 @@
     [self.search AMapPOIAroundSearch:request];
 }
 
+#pragma mark - Location
+
+- (void)updateCurrentLocation
+{
+    [self.locationManager requestLocationWithReGeocode:NO completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
+        
+        if (error)
+        {
+            NSLog(@"error:%@", error);
+            return;
+        }
+        
+        _curLocation = location;
+        
+        CurrentLocationAnnotation *annotation = [[CurrentLocationAnnotation alloc] init];
+        annotation.coordinate = _curLocation.coordinate;
+        annotation.title = @"当前位置";
+        [self.mapView addAnnotation:annotation];
+        [self.mapView selectAnnotation:annotation animated:YES];
+        
+        [self startPOIAroundSearch];
+    }];
+}
+
 #pragma mark - Actions
 
 - (void)routePlanAction
 {
-    if (_userLocation == nil)
+    if (_curLocation == nil)
     {
         NSLog(@"未获取到当前位置");
         return;
     }
     
-    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:_userLocation.coordinate.latitude
-                                                          longitude:_userLocation.coordinate.longitude];
+    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:_curLocation.coordinate.latitude
+                                                          longitude:_curLocation.coordinate.longitude];
     
     [self.driveManager calculateDriveRouteWithStartPoints:@[startPoint]
                                                 endPoints:@[_endPoint]
@@ -260,23 +292,6 @@
 
 #pragma mark - MapView Delegate
 
-- (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation
-{
-    if (updatingLocation)
-    {
-        if (_userLocation == nil)
-        {
-            _userLocation = userLocation;
-            
-            [self startPOIAroundSearch];
-        }
-        else
-        {
-            _userLocation = userLocation;
-        }
-    }
-}
-
 - (void)mapView:(MAMapView *)mapView annotationView:(MAAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     if ([view.annotation isKindOfClass:[MAPointAnnotation class]])
@@ -292,7 +307,24 @@
 
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
 {
-    if ([annotation isKindOfClass:[MAPointAnnotation class]])
+    if ([annotation isKindOfClass:[CurrentLocationAnnotation class]])
+    {
+        static NSString *pointReuseIndetifier = @"CurrentLocationAnnotationView";
+        MAPinAnnotationView *annotationView = (MAPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndetifier];
+        
+        if (annotationView == nil)
+        {
+            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation
+                                                             reuseIdentifier:pointReuseIndetifier];
+        }
+        
+        annotationView.pinColor = MAPinAnnotationColorGreen;
+        annotationView.canShowCallout = YES;
+        annotationView.draggable = NO;
+        
+        return annotationView;
+    }
+    else if ([annotation isKindOfClass:[MAPointAnnotation class]])
     {
         static NSString *pointReuseIndetifier = @"QuickStartAnnotationView";
         QuickStartAnnotationView *annotationView = (QuickStartAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndetifier];
@@ -310,6 +342,13 @@
     }
     
     return nil;
+}
+
+#pragma mark - LocationManager Delegate
+
+- (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
 }
 
 @end

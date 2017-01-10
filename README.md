@@ -20,7 +20,7 @@
 /* 根据当前位置进行POI周边餐饮搜索. */
 - (void)startPOIAroundSearch
 {
-    if (_userLocation == nil)
+    if (_curLocation == nil)
     {
         NSLog(@"未获取到当前位置");
         return;
@@ -28,8 +28,8 @@
     
     AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
     
-    request.location = [AMapGeoPoint locationWithLatitude:_userLocation.location.coordinate.latitude
-                                                longitude:_userLocation.location.coordinate.longitude];
+    request.location = [AMapGeoPoint locationWithLatitude:_curLocation.coordinate.latitude
+                                                longitude:_curLocation.coordinate.longitude];
     request.keywords            = @"餐饮";
     request.sortrule            = 1;
     request.requireExtension    = NO;
@@ -40,14 +40,14 @@
 /* 根据当前位置和目的地POI的位置进行路径规划. */
 - (void)routePlanAction
 {
-    if (_userLocation == nil)
+    if (_curLocation == nil)
     {
         NSLog(@"未获取到当前位置");
         return;
     }
     
-    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:_userLocation.coordinate.latitude
-                                                          longitude:_userLocation.coordinate.longitude];
+    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:_curLocation.coordinate.latitude
+                                                          longitude:_curLocation.coordinate.longitude];
     
     [self.driveManager calculateDriveRouteWithStartPoints:@[startPoint]
                                                 endPoints:@[_endPoint]
@@ -61,15 +61,15 @@
 /* 根据当前位置进行POI周边餐饮搜索. */
 func startPOIAroundSearch() {
     
-    guard let userLocation = userLocation else {
+    guard let curLocation = curLocation else {
         NSLog("未获取到当前位置")
         return
     }
     
     let request = AMapPOIAroundSearchRequest()
     
-    request.location = AMapGeoPoint.location(withLatitude: CGFloat(userLocation.location.coordinate.latitude),
-                                             longitude: CGFloat(userLocation.location.coordinate.longitude))
+    request.location = AMapGeoPoint.location(withLatitude: CGFloat(curLocation.location.coordinate.latitude),
+                                             longitude: CGFloat(curLocation.location.coordinate.longitude))
     request.keywords = "餐饮"
     request.sortrule = 1
     request.requireExtension = false
@@ -83,12 +83,12 @@ func routePlanAction() {
         return
     }
     
-    guard let userLocation = userLocation else {
+    guard let curLocation = curLocation else {
         NSLog("未获取到当前位置")
         return
     }
     
-    let startP = AMapNaviPoint.location(withLatitude: CGFloat(userLocation.coordinate.latitude), longitude: CGFloat(userLocation.coordinate.longitude))!
+    let startP = AMapNaviPoint.location(withLatitude: CGFloat(curLocation.coordinate.latitude), longitude: CGFloat(curLocation.coordinate.longitude))!
     driveManager.calculateDriveRoute(withStart: [startP], end: [endPoint], wayPoints: nil, drivingStrategy: .singleDefault)
 }
 ```

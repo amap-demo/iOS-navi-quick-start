@@ -20,3 +20,7 @@
 - (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end
+
+@interface CurrentLocationAnnotation : MAPointAnnotation
+
+@end

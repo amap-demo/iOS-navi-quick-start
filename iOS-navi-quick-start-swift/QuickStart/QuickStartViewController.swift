@@ -8,14 +8,15 @@
 
 import UIKit
 
-class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate, AMapNaviDriveManagerDelegate, DriveNaviViewControllerDelegate {
+class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate, AMapNaviDriveManagerDelegate, AMapLocationManagerDelegate, DriveNaviViewControllerDelegate {
 
     var mapView: MAMapView!
     var driveManager: AMapNaviDriveManager!
     var search: AMapSearchAPI!
+    var locationManager: AMapLocationManager!
     
     var endPoint: AMapNaviPoint?
-    var userLocation: MAUserLocation?
+    var curLocation: CLLocation?
     var poiAnnotations = [MAPointAnnotation]()
     
     override func viewDidLoad() {
@@ -26,6 +27,9 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         initMapView()
         initDriveManager()
         initSearch()
+        initLocationManager()
+        
+        updateCurrentLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,12 +37,6 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         
         navigationController?.isNavigationBarHidden = false
         navigationController?.isToolbarHidden = true
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        mapView.showsUserLocation = true
     }
     
     // MARK: - Initalization
@@ -62,24 +60,59 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         search.delegate = self
     }
     
+    func initLocationManager() {
+        locationManager = AMapLocationManager()
+        locationManager.delegate = self
+        
+        locationManager.locationTimeout = 3
+    }
+    
     //MARK: - Search
     
     func startPOIAroundSearch() {
         
-        guard let userLocation = userLocation else {
+        guard let curLocation = curLocation else {
             NSLog("未获取到当前位置")
             return
         }
         
         let request = AMapPOIAroundSearchRequest()
         
-        request.location = AMapGeoPoint.location(withLatitude: CGFloat(userLocation.location.coordinate.latitude),
-                                                 longitude: CGFloat(userLocation.location.coordinate.longitude))
+        request.location = AMapGeoPoint.location(withLatitude: CGFloat(curLocation.coordinate.latitude),
+                                                 longitude: CGFloat(curLocation.coordinate.longitude))
         request.keywords = "餐饮"
         request.sortrule = 1
         request.requireExtension = false
         
         search.aMapPOIAroundSearch(request)
+    }
+    
+    //MARK: - Location
+    
+    func updateCurrentLocation() {
+        locationManager.requestLocation(withReGeocode: false, completionBlock:{ [weak self] (location, regeo, error) -> Void in
+            
+            let error = error as? NSError
+            if error != nil {
+                NSLog("error:%@", error!)
+                return
+            }
+            
+            self?.curLocation = location
+            
+            guard let curLocation = self?.curLocation else {
+                return
+            }
+            
+            let annotation = CurrentLocationAnnotation()
+            annotation.coordinate = curLocation.coordinate
+            annotation.title = "当前位置"
+            self?.mapView.addAnnotation(annotation)
+            self?.mapView.selectAnnotation(annotation, animated: true)
+            
+            self?.startPOIAroundSearch()
+            }
+        )
     }
 
     //MARK: - Actions
@@ -89,12 +122,12 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
             return
         }
         
-        guard let userLocation = userLocation else {
+        guard let curLocation = curLocation else {
             NSLog("未获取到当前位置")
             return
         }
         
-        let startP = AMapNaviPoint.location(withLatitude: CGFloat(userLocation.coordinate.latitude), longitude: CGFloat(userLocation.coordinate.longitude))!
+        let startP = AMapNaviPoint.location(withLatitude: CGFloat(curLocation.coordinate.latitude), longitude: CGFloat(curLocation.coordinate.longitude))!
         driveManager.calculateDriveRoute(withStart: [startP], end: [endPoint], wayPoints: nil, drivingStrategy: .singleDefault)
     }
     
@@ -205,19 +238,6 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
     
     //MARK: - MapView Delegate
     
-    func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
-        if updatingLocation {
-            if self.userLocation == nil {
-                self.userLocation = userLocation
-                
-                startPOIAroundSearch()
-            }
-            else {
-                self.userLocation = userLocation
-            }
-        }
-    }
-    
     func mapView(_ mapView: MAMapView!, annotationView view: MAAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         if view.annotation is MAPointAnnotation {
             
@@ -230,7 +250,24 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
     }
     
     func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {
-        if annotation is MAPointAnnotation {
+        
+        if annotation is CurrentLocationAnnotation {
+            let pointReuseIndetifier = "CurrentLocationAnnotationView"
+            
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: pointReuseIndetifier) as? MAPinAnnotationView
+            
+            if annotationView == nil {
+                annotationView = MAPinAnnotationView(annotation: annotation, reuseIdentifier: pointReuseIndetifier)
+            }
+            
+            annotationView?.pinColor        = MAPinAnnotationColor.green
+            annotationView?.canShowCallout  = true
+            annotationView?.animatesDrop    = false
+            annotationView?.isDraggable     = false
+            
+            return annotationView
+        }
+        else if annotation is MAPointAnnotation {
             let pointReuseIndetifier = "QuickStartAnnotationView"
             
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: pointReuseIndetifier) as? QuickStartAnnotationView
@@ -247,6 +284,13 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         }
         
         return nil
+    }
+    
+    //MARK: - AMapLocationManagerDelegate
+    
+    func amapLocationManager(_ manager: AMapLocationManager!, didFailWithError error: Error!) {
+        let error = error as NSError
+        NSLog("error:{%d - %@}", error.code, error.localizedDescription)
     }
 
 }

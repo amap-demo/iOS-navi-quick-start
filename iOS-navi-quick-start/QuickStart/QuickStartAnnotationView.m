@@ -66,3 +66,7 @@
 }
 
 @end
+
+@implementation CurrentLocationAnnotation
+
+@end

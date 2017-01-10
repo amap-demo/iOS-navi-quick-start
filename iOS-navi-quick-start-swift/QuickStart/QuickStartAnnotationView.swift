@@ -60,3 +60,7 @@ class QuickStartAnnotationView: MAPinAnnotationView {
     }
 
 }
+
+class CurrentLocationAnnotation: MAPointAnnotation {
+    
+}

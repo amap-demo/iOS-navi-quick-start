@@ -10,6 +10,7 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapNaviKit/AMapNaviKit.h>
 #import <AMapSearchKit/AMapSearchAPI.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 
 @interface QuickStartViewController : UIViewController
 
@@ -18,5 +19,7 @@
 @property (nonatomic, strong) AMapSearchAPI *search;
 
 @property (nonatomic, strong) AMapNaviDriveManager *driveManager;
+
+@property (nonatomic, strong) AMapLocationManager *locationManager;
 
 @end
