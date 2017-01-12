@@ -378,7 +378,8 @@
 				TargetAttributes = {
 					3A534BD31E26058100ED76BB = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = YMJ372W38W;
+						ProvisioningStyle = Manual;
 						TestTargetID = 3AA6B5B71E0B784D007A15F3;
 					};
 					3AA6B5B71E0B784D007A15F3 = {
@@ -620,13 +621,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YMJ372W38W;
 				INFOPLIST_FILE = "iOS-navi-quick-startUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-startUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "249676f7-6dfc-4adf-ab62-14190fd9ac21";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
 				TEST_TARGET_NAME = "iOS-navi-quick-start";
 			};
 			name = Debug;
@@ -635,13 +636,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YMJ372W38W;
 				INFOPLIST_FILE = "iOS-navi-quick-startUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-startUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "249676f7-6dfc-4adf-ab62-14190fd9ac21";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
 				TEST_TARGET_NAME = "iOS-navi-quick-start";
 			};
 			name = Release;
