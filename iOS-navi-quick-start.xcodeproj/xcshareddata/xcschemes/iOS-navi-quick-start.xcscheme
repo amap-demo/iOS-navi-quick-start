@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3A534BD31E26058100ED76BB"
+               BuildableName = "iOS-navi-quick-startUITests.xctest"
+               BlueprintName = "iOS-navi-quick-startUITests"
+               ReferencedContainer = "container:iOS-navi-quick-start.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

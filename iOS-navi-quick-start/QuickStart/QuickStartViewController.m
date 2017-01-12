@@ -54,6 +54,7 @@
     
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.toolbarHidden = YES;
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 #pragma mark - Initalization
@@ -283,6 +284,7 @@
     if (_poiAnnotations.count == 1)
     {
         self.mapView.centerCoordinate = [(MAPointAnnotation *)_poiAnnotations[0] coordinate];
+        [self.mapView setZoomLevel:16 animated:NO];
     }
     else
     {

@@ -37,6 +37,7 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         
         navigationController?.isNavigationBarHidden = false
         navigationController?.isToolbarHidden = true
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     // MARK: - Initalization
@@ -230,6 +231,7 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         
         if poiAnnotations.count == 1 {
             mapView.centerCoordinate = (poiAnnotations.first?.coordinate)!
+            mapView.setZoomLevel(16, animated: false)
         }
         else {
             mapView.showAnnotations(poiAnnotations, animated: false)
