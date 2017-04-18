@@ -185,6 +185,10 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         NSLog("ArrivedWayPoint:\(wayPointIndex)");
     }
     
+    func driveManagerIsNaviSoundPlaying(_ driveManager: AMapNaviDriveManager) -> Bool {
+        return SpeechSynthesizer.Shared.isSpeaking()
+    }
+    
     func driveManager(_ driveManager: AMapNaviDriveManager, playNaviSound soundString: String, soundStringType: AMapNaviSoundType) {
         NSLog("playNaviSoundString:{%d:%@}", soundStringType.rawValue, soundString);
         
