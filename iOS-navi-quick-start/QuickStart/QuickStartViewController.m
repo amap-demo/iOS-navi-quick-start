@@ -77,14 +77,10 @@
 
 - (void)initDriveManager
 {
-    if (self.driveManager == nil)
-    {
-        self.driveManager = [[AMapNaviDriveManager alloc] init];
-        [self.driveManager setDelegate:self];
-        
-        [self.driveManager setAllowsBackgroundLocationUpdates:YES];
-        [self.driveManager setPausesLocationUpdatesAutomatically:NO];
-    }
+    [[AMapNaviDriveManager sharedInstance] setDelegate:self];
+    
+    [[AMapNaviDriveManager sharedInstance] setAllowsBackgroundLocationUpdates:YES];
+    [[AMapNaviDriveManager sharedInstance] setPausesLocationUpdatesAutomatically:NO];
 }
 
 - (void)initSearch
@@ -165,7 +161,7 @@
     AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:_curLocation.coordinate.latitude
                                                           longitude:_curLocation.coordinate.longitude];
     
-    [self.driveManager calculateDriveRouteWithStartPoints:@[startPoint]
+    [[AMapNaviDriveManager sharedInstance] calculateDriveRouteWithStartPoints:@[startPoint]
                                                 endPoints:@[_endPoint]
                                                 wayPoints:nil
                                           drivingStrategy:AMapNaviDrivingStrategySingleDefault];
@@ -176,7 +172,7 @@
 - (void)driveNaviViewCloseButtonClicked
 {
     //停止导航
-    [self.driveManager stopNavi];
+    [[AMapNaviDriveManager sharedInstance] stopNavi];
     
     //停止语音
     [[SpeechSynthesizer sharedSpeechSynthesizer] stopSpeak];
@@ -199,10 +195,10 @@
     [driveVC setDelegate:self];
     
     //将driveView添加为导航数据的Representative，使其可以接收到导航诱导数据
-    [self.driveManager addDataRepresentative:driveVC.driveView];
+    [[AMapNaviDriveManager sharedInstance] addDataRepresentative:driveVC.driveView];
     
     [self.navigationController pushViewController:driveVC animated:NO];
-    [self.driveManager startEmulatorNavi];
+    [[AMapNaviDriveManager sharedInstance] startEmulatorNavi];
 }
 
 - (void)driveManager:(AMapNaviDriveManager *)driveManager onCalculateRouteFailure:(NSError *)error

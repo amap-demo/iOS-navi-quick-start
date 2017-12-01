@@ -11,7 +11,6 @@ import UIKit
 class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate, AMapNaviDriveManagerDelegate, AMapLocationManagerDelegate, DriveNaviViewControllerDelegate {
 
     var mapView: MAMapView!
-    var driveManager: AMapNaviDriveManager!
     var search: AMapSearchAPI!
     var locationManager: AMapLocationManager!
     
@@ -49,11 +48,11 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
     }
     
     func initDriveManager() {
-        driveManager = AMapNaviDriveManager()
-        driveManager.delegate = self
         
-        driveManager.allowsBackgroundLocationUpdates = true
-        driveManager.pausesLocationUpdatesAutomatically = false
+        AMapNaviDriveManager.sharedInstance().delegate = self
+        
+        AMapNaviDriveManager.sharedInstance().allowsBackgroundLocationUpdates = true
+        AMapNaviDriveManager.sharedInstance().pausesLocationUpdatesAutomatically = false
     }
     
     func initSearch() {
@@ -129,14 +128,14 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         }
         
         let startP = AMapNaviPoint.location(withLatitude: CGFloat(curLocation.coordinate.latitude), longitude: CGFloat(curLocation.coordinate.longitude))!
-        driveManager.calculateDriveRoute(withStart: [startP], end: [endPoint], wayPoints: nil, drivingStrategy: .singleDefault)
+        AMapNaviDriveManager.sharedInstance().calculateDriveRoute(withStart: [startP], end: [endPoint], wayPoints: nil, drivingStrategy: .singleDefault)
     }
     
     //MARK: - DriveNaviView Delegate
     
     func driveNaviViewCloseButtonClicked() {
         //停止导航
-        driveManager.stopNavi()
+        AMapNaviDriveManager.sharedInstance().stopNavi()
         
         //停止语音
         SpeechSynthesizer.Shared.stopSpeak()
@@ -158,10 +157,10 @@ class QuickStartViewController: UIViewController, MAMapViewDelegate, AMapSearchD
         driveVC.delegate = self
         
         //将driveView添加为导航数据的Representative，使其可以接收到导航诱导数据
-        driveManager.addDataRepresentative(driveVC.driveView)
+        AMapNaviDriveManager.sharedInstance().addDataRepresentative(driveVC.driveView)
         
         _ = navigationController?.pushViewController(driveVC, animated: false)
-        driveManager.startEmulatorNavi()
+        AMapNaviDriveManager.sharedInstance().startEmulatorNavi()
     }
     
     func driveManager(_ driveManager: AMapNaviDriveManager, onCalculateRouteFailure error: Error) {
