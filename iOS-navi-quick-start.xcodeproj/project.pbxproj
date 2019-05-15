@@ -334,7 +334,6 @@
 				3AA6B5B41E0B784D007A15F3 /* Sources */,
 				3AA6B5B51E0B784D007A15F3 /* Frameworks */,
 				3AA6B5B61E0B784D007A15F3 /* Resources */,
-				BAE9E2EE9C77070A31D54D57 /* [CP] Embed Pods Frameworks */,
 				A09002D1607E0D601A3EDA8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -354,7 +353,6 @@
 				3AA6B5EF1E0D01ED007A15F3 /* Sources */,
 				3AA6B5F01E0D01ED007A15F3 /* Frameworks */,
 				3AA6B5F11E0D01ED007A15F3 /* Resources */,
-				1575162CA93BE06A4FCEE616 /* [CP] Embed Pods Frameworks */,
 				4FA071888CBAB196F54F9C1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -409,6 +407,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -459,21 +458,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1575162CA93BE06A4FCEE616 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		427E8833B145E038173498DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,17 +482,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-navi-quick-start-swift/Pods-iOS-navi-quick-start-swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A09002D1607E0D601A3EDA8C /* [CP] Copy Pods Resources */ = {
@@ -517,17 +502,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5F8C4799302669E90439E69 /* [CP] Check Pods Manifest.lock */ = {
@@ -546,21 +532,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BAE9E2EE9C77070A31D54D57 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-navi-quick-start/Pods-iOS-navi-quick-start-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -754,6 +725,8 @@
 			baseConfigurationReference = 74D59919CB5BECC0E48AAEC0 /* Pods-iOS-navi-quick-start.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YMJ372W38W;
 				INFOPLIST_FILE = "iOS-navi-quick-start/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -770,15 +743,17 @@
 			baseConfigurationReference = 6ECD8A2A5127DCE2F931DAB5 /* Pods-iOS-navi-quick-start.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = YMJ372W38W;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iOS-navi-quick-start/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-start";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a892512d-fe94-4702-b716-0b66880b936d";
-				PROVISIONING_PROFILE_SPECIFIER = openPlatformInhouse;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -787,6 +762,8 @@
 			baseConfigurationReference = 36A044C1D02E26C404F67A2C /* Pods-iOS-navi-quick-start-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YMJ372W38W;
 				INFOPLIST_FILE = "iOS-navi-quick-start-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -798,7 +775,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-navi-quick-start-swift/Swift-Bridge-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -807,18 +784,20 @@
 			baseConfigurationReference = F5D00E627E0FBA380C383E90 /* Pods-iOS-navi-quick-start-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = YMJ372W38W;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iOS-navi-quick-start-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-navi-quick-start";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a892512d-fe94-4702-b716-0b66880b936d";
-				PROVISIONING_PROFILE_SPECIFIER = openPlatformInhouse;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-navi-quick-start-swift/Swift-Bridge-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -832,6 +811,7 @@
 				3A534BDC1E26058100ED76BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AA6B5B31E0B784D007A15F3 /* Build configuration list for PBXProject "iOS-navi-quick-start" */ = {
 			isa = XCConfigurationList;

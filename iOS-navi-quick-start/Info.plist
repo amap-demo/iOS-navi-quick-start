@@ -27,9 +27,9 @@
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>导航SDK需要您的定位服务，否则可能无法使用。</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>导航SDK需要您的定位服务，否则可能无法使用。</string>
 	<key>NSLocationAlwaysUsageDescription</key>
+	<string>导航SDK需要您的定位服务，否则可能无法使用。</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>导航SDK需要您的定位服务，否则可能无法使用。</string>
 	<key>UIBackgroundModes</key>
 	<array>
@@ -44,6 +44,9 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
